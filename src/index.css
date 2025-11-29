@@ -1,0 +1,24 @@
+@import "tailwindcss";/* index.css */
+
+:root {
+  --nav-font-size: 16px;   /* पूरा navbar यही size use करेगा */
+  --nav-font-color: #544d4d; /* आपका दिया हुआ grey-ish tone */
+  --main-gradient: linear-gradient(to right, #ff3535, #ece1e1, #ffd012);
+}
+
+.nav-item {
+  font-size: var(--nav-font-size);
+  color: var(--nav-font-color);
+}
+.bg-main-gradient {
+  background: var(--main-gradient);
+}
+@media (max-width: 1100px) {
+  .desktop-menu{
+    gap: .2vw;
+  }
+  .nav-item {
+    font-size: 14px; /* Smaller font size for smaller screens */
+    margin: 0 4px; /* Reduced margin for smaller screens */
+  }
+}
