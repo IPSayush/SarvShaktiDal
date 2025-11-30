@@ -2,21 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 
 export default function HeroCarousel() {
   const images = [
-    {
-      src: "https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=2000&auto=format&fit=crop",
-      title: "Hero Image One",
-      subtitle: "This is your first hero slide."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=2000&auto=format&fit=crop",
-      title: "Hero Image Two",
-      subtitle: "This is your second hero slide."
-    }
+    { src: "../sliderImg1.webp" },
+    { src: "../sliderImg2.webp" }
   ];
 
   const total = images.length;
   const [current, setCurrent] = useState(0);
-  const intervalTime = 4000; // autoplay speed
+  const intervalTime = 2000; // 2 seconds
   const timerRef = useRef(null);
 
   const startAutoPlay = () => {
@@ -36,7 +28,8 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden h-[60vh] bg-black">
+    <>
+    <section className="relative w-full overflow-hidden bg-black">
 
       {/* Slides */}
       <div
@@ -44,53 +37,33 @@ export default function HeroCarousel() {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {images.map((img, idx) => (
-          <div key={idx} className="min-w-full h-[60vh] relative">
+          <div key={idx} className="min-w-full relative">
             <img
               src={img.src}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover lg:object-fill"
               alt=""
+              loading="lazy" decoding="async"
             />
           </div>
         ))}
       </div>
-
-      {/* Prev Button */}
-      <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-full"
-        onClick={() => {
-          setCurrent((c) => (c - 1 + total) % total);
-          startAutoPlay();
-        }}
-      >
-        ‹
-      </button>
-
-      {/* Next Button */}
-      <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-full"
-        onClick={() => {
-          setCurrent((c) => (c + 1) % total);
-          startAutoPlay();
-        }}
-      >
-        ›
-      </button>
 
       {/* Dots */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
         {images.map((_, idx) => (
           <button
             key={idx}
+            onClick={() => setCurrent(idx)}
             className={`w-3 h-3 rounded-full ${
               idx === current ? "bg-white" : "bg-white/40"
             }`}
-            onClick={() => {
-              setCurrent(idx);
-              startAutoPlay();
-            }}
-          ></button>
+          />
         ))}
       </div>
     </section>
+    <section className="py-1 my-5 bg-amber-300 text-center text-black text-lg font-semibold flex items-center justify-center">
+        <marquee behavior="scroll" direction="left" scrollamount="5" truespeed='true' >दल में जुड़ने से आपकी सामाजिक, व्यक्तिगत व राजनीतिक मान व प्रतिष्ठा में वृद्धि होती है, जिससे आप समाज में अपने आप को सबल सशक्त बना सकते है</marquee>
+    </section>
+    </>
   );
 }
