@@ -47,19 +47,6 @@ export default function HeroCarousel() {
           </div>
         ))}
       </div>
-
-      {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full ${
-              idx === current ? "bg-white" : "bg-white/40"
-            }`}
-          />
-        ))}
-      </div>
     </section>
     <section className="py-1 my-5 bg-amber-300 text-center text-black text-lg font-semibold flex items-center justify-center">
         <marquee behavior="scroll" direction="left" scrollamount="5" truespeed='true' >दल में जुड़ने से आपकी सामाजिक, व्यक्तिगत व राजनीतिक मान व प्रतिष्ठा में वृद्धि होती है, जिससे आप समाज में अपने आप को सबल सशक्त बना सकते है</marquee>

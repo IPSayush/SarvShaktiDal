@@ -1,10 +1,14 @@
+import { Suspense } from "react"
+import React from "react"
 import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
+const Home = React.lazy(() => import("./pages/Home"))
 function App() {
   return (
     <>
       <Navbar />
-      <Home/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Home/>
+      </Suspense>
     </>
   )
 }
