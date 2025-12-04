@@ -1,10 +1,14 @@
 import React, { Suspense, lazy, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Form, Link } from 'react-router-dom';
+import FormContact from '../components/FormContact.jsx';
+import Heading from '../components/Heading.jsx';
 // Lazy-load HeroCarousel to reduce initial bundle size
 const HeroCarousel = lazy(() => import('../components/HeroCarousel'));
+// console.log(UsersRound);
 
 // Keep same exported Home component
 function Home() {
+
   // useMemo for cards so identity is stable across renders
   const cardsMemo = useMemo(() => [
     { id: 'become-member', title: "Become Member", sub: "सदस्य बनें", icon: "users" },
@@ -77,10 +81,20 @@ function Home() {
           </div>
         </section>
 
+
+
+
+
+        <Heading />
+
+
+
+
         {/* Pass memoized cards to Cards component */}
         <Cards cards={cardsMemo} />
-
+        <Heading />
         <Layout />
+        <Heading />
 
         <NewsAndBlogs />
       </main>
@@ -151,7 +165,7 @@ function Cards({ cards }) {
             <Icons type={c.icon} />
           </div>
 
-          <h3 className="text-lg font-semibold text-[#212529BF]">{c.title}</h3>
+          <h3 className="text-lg font-black text-[#000000]">{c.title}</h3>
 
           <p className="text-gray-600 mt-1 text-sm">{c.sub}</p>
 
@@ -261,6 +275,12 @@ const Layout = () => {
   );
 };
 
+
+
+
+
+
+
 /* --- NewsAndBlogs: lazy images, semantic article, accessible links --- */
 const NewsAndBlogs = () => {
   return (
@@ -271,19 +291,19 @@ const NewsAndBlogs = () => {
 
           <div className="flex flex-wrap -m-4">
             {[
-              { id: 'n1', title: 'The Catalyzer', img: './flag.webp', excerpt: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.' },
-              { id: 'n2', title: 'The 400 Blows', img: './flag.webp', excerpt: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.' },
-              { id: 'n3', title: 'Shooting Stars', img: './flag.webp', excerpt: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.' },
+              { id: 'n1', date: 'Sep 24, 2025', title: 'सर्वशक्ति दल: समाज में शक्ति, सेवा और बदलाव का प्रतीक', img: './flag.webp', excerpt: 'सेवा और बदलाव का प्रतीक कैसे एक संगठन ने समाज के हर वर्ग तक शिक्षा, स्वास्थ्य और जागरूकता पहुंचाई' },
+              { id: 'n2', date: 'Sep 24, 2025', title: 'समाचार शैली और अभियान पर फोकस', img: './flag.webp', excerpt: 'सर्वशक्ति दल ने चलाया विशाल स्वच्छता और स्वास्थ्य अभियान' },
+              { id: 'n3', date: 'Sep 24, 2025', title: 'प्रेरणादायक और जागरूकता पर फोकस', img: './flag.webp', excerpt: 'सर्वशक्ति दल: हर व्यक्ति में शक्ति, हर समाज में उम्मीद' },
             ].map((post) => (
               <article key={post.id} className="p-4 md:w-1/3" aria-labelledby={`${post.id}-title`}>
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                   <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={post.img} alt={post.title} fetchpriority="high" loading="lazy" decoding="async" width="720" height="400" />
                   <div className="p-6">
-                    <h3 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h3>
+                    <h3 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{post.date}</h3>
                     <h4 id={`${post.id}-title`} className="title-font text-lg font-medium text-gray-900 mb-3">{post.title}</h4>
                     <p className="leading-relaxed mb-3">{post.excerpt}</p>
-                    <div className="flex items-center flex-wrap ">
-                      <Link className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" to="#" aria-label={`Learn more about ${post.title}`}>Learn More
+                    <div className="flex items-center flex-wrap">
+                      <Link className="text-indigo-500 inline-flex items-center  md:mb-2 lg:mb-0" to="#" aria-label={`Learn more about ${post.title}`}>Learn More
                         <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                           <path d="M5 12h14"></path>
                           <path d="M12 5l7 7-7 7"></path>
@@ -298,6 +318,7 @@ const NewsAndBlogs = () => {
           </div>
         </div>
       </section>
+      <FormContact />
     </>
   );
 };

@@ -21,7 +21,6 @@ export default function Navbar() {
               />
             </div>
           </div>
-
           {/* desktop menu */}
           <ul className="hidden md:flex items-center space-x-8 md:gap-6 lg:gap-10 ml-6">
             <li className="nav-item  m-0 text-center">
@@ -37,10 +36,10 @@ export default function Navbar() {
               <Link to="/news" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">NEWS</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/become-member" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">JOIN</Link>
+              <Link to="/join" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">JOIN</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/donation" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">DONATION</Link>
+              <Link to="/donate" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">DONATION</Link>
             </li>
             <li className="nav-item  m-0 text-center">
               <Link to="/contact" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">CONTACT</Link>
@@ -62,9 +61,8 @@ export default function Navbar() {
 
       {/* mobile collapsible menu */}
       <div
-        className={`md:hidden transition-[max-height] duration-300 ease-in-out overflow-hidden ${
-          open ? "max-h-[500px]" : "max-h-0"
-        }`}
+        className={`md:hidden transition-[max-height] duration-300 ease-in-out overflow-hidden ${open ? "max-h-[500px]" : "max-h-0"
+          }`}
       >
         <ul className="px-4 pt-4 pb-6 space-y-3 bg-main-gradient">
           <li className="mobile-item">

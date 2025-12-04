@@ -6,7 +6,13 @@
   --main-gradient: linear-gradient(to right, #ff1f1f, #f8f7f1, #ffcc00);
 }
 .background-main-gradient {
-  background: var(--main-gradient);
+  background: linear-gradient(
+    to right,
+    #ef4444,   /* red-500 */
+    #fecdd3,   /* pink-200 */
+    #fef9c3,   /* yellow-100 */
+    #fde047    /* yellow-300 */
+  );
 }
 @media (min-width: 768px){
   .nav-item {
