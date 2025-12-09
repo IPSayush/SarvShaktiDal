@@ -1,19 +1,16 @@
-import { Suspense } from "react"
-import React from "react"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import { Suspense, lazy } from "react"
 import { Outlet } from "react-router-dom"
-// const Home = React.lazy(() => import("./pages/Home"))
+
+const Navbar = lazy(() => import("./components/Navbar"))
+const Footer = lazy(() => import("./components/Footer"))
+
 function App() {
   return (
-    <>
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
-        <Outlet />
-        <Footer/>
-      </Suspense>
-    </>
+    <Suspense fallback={<div className="flex items-center justify-center h-screen"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div></div>}>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </Suspense>
   )
 }
 

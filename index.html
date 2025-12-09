@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-
-  <!-- Favicon -->
   <link rel="icon" href="/logo.png" type="image/png" />
-
-  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- index.html head में -->
-  <link rel="preload" as="image" href="/NavLogo.webp" imagesrcset="/NavLogo.webp 1x, /NavLogo@2x.webp 2x" />
+  
+  <!-- Preconnect for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" as="image" href="/NavLogo.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/flag.webp" fetchpriority="high" />
 
 
   <!-- SEO Title -->
@@ -49,12 +49,27 @@
   <meta name="twitter:image" content="/NavLogo.jpg" />
 
   <!-- Mobile Browser Theme Color -->
-  <meta name="theme-color" content="#ff0000" />
+  <meta name="theme-color" content="#667eea" />
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 </head>
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <script type="module" src="/src/main.jsx" defer></script>
+  
+  <!-- Service Worker for caching -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 
 </html>

@@ -35,19 +35,16 @@ function Home() {
           <div className="container mx-auto flex px-5 py-15 md:flex-row flex-col items-center border border-red-300 shadow-lg rounded-lg mb-10">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 ">
               {/* optimized image: loading lazy, decoding async, dimensions */}
-              <picture>
-                <source srcSet="./flag.webp" type="image/webp" />
-                <img
-                  fetchpriority="high"
-                  className="object-cover object-center rounded"
-                  alt="संगठन का झंडा"
-                  src="./flag.webp"
-                  loading="lazy"
-                  decoding="async"
-                  width="800"
-                  height="533"
-                />
-              </picture>
+              <img
+                fetchPriority="high"
+                className="object-cover object-center rounded"
+                alt="संगठन का झंडा"
+                src="./flag.webp"
+                loading="eager"
+                decoding="sync"
+                width="800"
+                height="533"
+              />
             </div>
 
             <div className="lg:grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
@@ -195,7 +192,7 @@ const Layout = () => {
               <div className="md:p-2 p-1 w-1/2">
                 <img
                   alt="गैलरी चित्र 1"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="w-full object-cover h-full object-center block"
                   src="./flag.webp"
                   loading="lazy"
@@ -207,7 +204,7 @@ const Layout = () => {
               <div className="md:p-2 p-1 w-1/2">
                 <img
                   alt="गैलरी चित्र 2"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="w-full object-cover h-full object-center block"
                   src="./flag.webp"
                   loading="lazy"
@@ -219,7 +216,7 @@ const Layout = () => {
               <div className="md:p-2 p-1 w-full">
                 <img
                   alt="गैलरी चित्र 3"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="w-full h-full object-cover object-center block"
                   src="./flag.webp"
                   loading="lazy"
@@ -234,7 +231,7 @@ const Layout = () => {
               <div className="md:p-2 p-1 w-full">
                 <img
                   alt="गैलरी चित्र 4"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="w-full h-full object-cover object-center block"
                   src="./flag.webp"
                   loading="lazy"
@@ -246,7 +243,7 @@ const Layout = () => {
               <div className="md:p-2 p-1 w-1/2">
                 <img
                   alt="गैलरी चित्र 5"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="w-full object-cover h-full object-center block"
                   src="./flag.webp"
                   loading="lazy"
@@ -258,7 +255,7 @@ const Layout = () => {
               <div className="md:p-2 p-1 w-1/2">
                 <img
                   alt="गैलरी चित्र 6"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="w-full object-cover h-full object-center block"
                   src="./flag.webp"
                   loading="lazy"
@@ -297,7 +294,7 @@ const NewsAndBlogs = () => {
             ].map((post) => (
               <article key={post.id} className="p-4 md:w-1/3" aria-labelledby={`${post.id}-title`}>
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={post.img} alt={post.title} fetchpriority="high" loading="lazy" decoding="async" width="720" height="400" />
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={post.img} alt={post.title} fetchPriority="high" loading="lazy" decoding="async" width="720" height="400" />
                   <div className="p-6">
                     <h3 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{post.date}</h3>
                     <h4 id={`${post.id}-title`} className="title-font text-lg font-medium text-gray-900 mb-3">{post.title}</h4>
