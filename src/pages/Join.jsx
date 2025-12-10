@@ -1,9 +1,12 @@
 import React from 'react'
+import Heading from "../components/Heading.jsx";
+import FormContact from "../components/FormContact.jsx";
 
 export default function Join() {
   return (
-    <div>
-      Join Page
-    </div>
+    <>
+    <Heading />
+    <FormContact />
+    </>
   )
 }
