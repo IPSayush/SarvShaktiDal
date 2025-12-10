@@ -10,7 +10,7 @@ export default function FooterSection() {
             setEmail('');
         }
         
-    };
+     };
 
     const recentPosts = [
         'Privacy Policy',
