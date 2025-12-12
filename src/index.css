@@ -1,4 +1,4 @@
-@import "tailwindcss";/* index.css */
+@import "tailwindcss";
 
 :root {
   --nav-font-size: 16px;   /* पूरा navbar यही size use करेगा */

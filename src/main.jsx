@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import React from 'react'
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
