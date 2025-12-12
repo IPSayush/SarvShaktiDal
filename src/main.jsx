@@ -12,6 +12,8 @@ import Join from './pages/Join.jsx'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
