@@ -48,7 +48,7 @@ export default function ContactFAQSection() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className=" bg-gray-100">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Contact Form Section */}
         <div className="bg-red-600 p-8 lg:p-12">

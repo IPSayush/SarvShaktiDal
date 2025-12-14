@@ -103,7 +103,7 @@ export default function Navbar() {
           </li>
           <li className="mobile-item">
             <Link
-              to="/become-member"
+              to="/join"
               onClick={() => setOpen(false)}
               className="block text-base font-bold text-gray-800 hover:text-white"
             >
@@ -112,7 +112,7 @@ export default function Navbar() {
           </li>
           <li className="mobile-item">
             <Link
-              to="/donation"
+              to="/donate"
               onClick={() => setOpen(false)}
               className="block text-base font-bold text-gray-800 hover:text-white"
             >
