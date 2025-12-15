@@ -6,11 +6,11 @@ function About() {
     <>
       <div className="w-full">
         {/* Hero Section with Background */}
-        <section className="relative w-full  py-16 sm:py-20 md:py-24 lg:py-32">
+        <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('/blank.webp')" }}>
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
-              THE PARTY
+              PHOTO GALLERY
             </h1>
           </div>
         </section>

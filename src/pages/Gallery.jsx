@@ -8,32 +8,32 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
+      src: "/blank.webp",
       alt: "Political Campaign 1"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      src: "/blank.webp",
       alt: "Political Campaign 2"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
+      src: "/blank.webp",
       alt: "Political Campaign 3"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&h=600&fit=crop",
+      src: "/blank.webp",
       alt: "Political Campaign 4"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
+      src: "/blank.webp",
       alt: "Political Campaign 5"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
+      src: "/blank.webp",
       alt: "Political Campaign 6"
     }
   ];
@@ -57,7 +57,7 @@ const Gallery = () => {
     <>
       <div className="w-full">
         {/* Hero Section */}
-        <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32">
+        <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('/blank.webp')" }}>
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">

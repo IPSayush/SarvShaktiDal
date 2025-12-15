@@ -9,9 +9,9 @@ const NewsAndBlogs = () => {
 
           <div className="flex flex-wrap -m-4">
             {[
-              { id: 'n1', date: 'Sep 24, 2025', title: 'सर्वशक्ति दल: समाज में शक्ति, सेवा और बदलाव का प्रतीक', img: './flag.webp', excerpt: 'सेवा और बदलाव का प्रतीक कैसे एक संगठन ने समाज के हर वर्ग तक शिक्षा, स्वास्थ्य और जागरूकता पहुंचाई' },
-              { id: 'n2', date: 'Sep 24, 2025', title: 'समाचार शैली और अभियान पर फोकस', img: './flag.webp', excerpt: 'सर्वशक्ति दल ने चलाया विशाल स्वच्छता और स्वास्थ्य अभियान' },
-              { id: 'n3', date: 'Sep 24, 2025', title: 'प्रेरणादायक और जागरूकता पर फोकस', img: './flag.webp', excerpt: 'सर्वशक्ति दल: हर व्यक्ति में शक्ति, हर समाज में उम्मीद' },
+              { id: 'n1', date: 'Sep 24, 2025', title: 'सर्वशक्ति दल: समाज में शक्ति, सेवा और बदलाव का प्रतीक', img: "./blank.webp", excerpt: 'सेवा और बदलाव का प्रतीक कैसे एक संगठन ने समाज के हर वर्ग तक शिक्षा, स्वास्थ्य और जागरूकता पहुंचाई' },
+              { id: 'n2', date: 'Sep 24, 2025', title: 'समाचार शैली और अभियान पर फोकस', img: "./blank.webp", excerpt: 'सर्वशक्ति दल ने चलाया विशाल स्वच्छता और स्वास्थ्य अभियान' },
+              { id: 'n3', date: 'Sep 24, 2025', title: 'प्रेरणादायक और जागरूकता पर फोकस', img: "./blank.webp", excerpt: 'सर्वशक्ति दल: हर व्यक्ति में शक्ति, हर समाज में उम्मीद' },
             ].map((post) => (
               <article key={post.id} className="p-4 md:w-1/3" aria-labelledby={`${post.id}-title`}>
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">

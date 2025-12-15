@@ -80,7 +80,7 @@ export default function FooterSection() {
                         {/* Placeholder Image */}
                         <div className="bg-white border-4 border-[#e7000b] inline-block shadow-md">
                             <img
-                                src="/flag.webp"
+                                src="./blank.webp"
                                 alt="Sarvashakti Dal"
                                 className="w-40 h-auto object-contain"
                                 loading="lazy"

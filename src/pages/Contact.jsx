@@ -35,11 +35,11 @@ export default function Contact() {
     <>
       <div className="w-full">
         {/* Hero Section with Background */}
-        <section className="relative w-full  py-16 sm:py-20 md:py-24 lg:py-32">
+        <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('/blank.webp')" }}>
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
-              THE PARTY
+              PHOTO GALLERY
             </h1>
           </div>
         </section>
@@ -150,6 +150,29 @@ export default function Contact() {
                   Send Message
                 </button>
               </form>
+            </div>
+            {/* Map Section */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden mt-12">
+              <div className="bg-orange-600 py-4 px-6">
+                <h3 className="text-xl font-bold text-white flex items-center">
+                  <MapPin className="w-6 h-6 mr-2" />
+                  मानचित्र पर देखें
+                </h3>
+              </div>
+
+              {/* Google Map Embed */}
+              <div className="relative w-full h-96">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.167346402159!2d75.76022947454426!3d26.961599376617993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3a2fc7db6f9%3A0x77e18ad28e4b0ab9!2sSarva%20Shakti%20Dal!5e0!3m2!1sen!2sin!4v1765822661827!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Location Map"
+                />
+              </div>
             </div>
           </div>
         </div>

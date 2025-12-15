@@ -11,8 +11,8 @@ export default function News() {
       title: "सर्वशक्तिव ददल: समाज में शक्ति़, सेवा और बदलाव का प्रतीक",
       excerpt:
         "कैसे एक संगठन ने समाज के हर वर्ग तक शिक्षा, स्वास्थ्य और जागरूकता पहुंचाई — छोटी-सी रिपोर्ट और फोटो।",
-      image: "/images/post1.jpg",
-      thumb: "/images/thumb1.jpg",
+      image: "./blank.webp",
+      thumb: "./blank.webp",
     },
     {
       id: 2,
@@ -20,8 +20,8 @@ export default function News() {
       title: "समाचार रैली और अभियान पर फोकस",
       excerpt:
         "स्थानीय रैली और जनजागरण अभियान: मुख्य बातें, हिस्सा लेने वालों की प्रतिक्रिया और आगे की योजना।",
-      image: "/images/post2.jpg",
-      thumb: "/images/thumb2.jpg",
+      image: "./blank.webp",
+      thumb: "./blank.webp",
     },
     {
       id: 3,
@@ -29,8 +29,8 @@ export default function News() {
       title: "प्रेरणादायक और जागरूकता पर फोकस",
       excerpt:
         "गाँव-गाँव जाकर किये गए काम और महिलाओं के सशक्तिकरण की छोटी-छोटी कहानियाँ।",
-      image: "/images/post3.jpg",
-      thumb: "/images/thumb3.jpg",
+      image: "./blank.webp",
+      thumb: "./blank.webp",
     },
   ];
 
