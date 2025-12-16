@@ -169,6 +169,7 @@ export default function Contact() {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Location Map"
                 />

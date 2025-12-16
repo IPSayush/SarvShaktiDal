@@ -1,5 +1,5 @@
-import React, { Suspense, lazy} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { Link } from 'react-router-dom';
 import FormContact from '../components/FormContact.jsx';
 import Heading from '../components/Heading.jsx';
 import HomeMain from '../components/HomeMain.jsx';
@@ -14,11 +14,23 @@ function Home() {
       <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading...</div>}>
         <HeroCarousel />
         <HomeMain />
-        <Heading />
+        <Heading
+          title="NEWS AND BLOG"
+          description="Discover the latest updates, news, and insights from our team."
+        />
+
         <HomeIconCards />
-        <Heading />
-        <ImagesLayout/>
-        <Heading />
+        <Heading
+          title="NEWS aur BLOG"
+          description="Discover the latest updates, news, and insights from our team."
+        />
+
+        <ImagesLayout />
+        <Heading
+          title="NEWS ^ BLOG"
+          description="Discover the latest updates, news, and insights from our team."
+        />
+
         <NewsAndBlogs />
         <FormContact />
       </Suspense>
