@@ -12,7 +12,6 @@ function ImagesLayout() {
                             <div className="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="गैलरी चित्र 1"
-                                    fetchPriority="high"
                                     className="w-full object-cover h-full object-center block"
                                     src="./blank.webp"
                                     loading="lazy"
@@ -24,7 +23,6 @@ function ImagesLayout() {
                             <div className="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="गैलरी चित्र 2"
-                                    fetchPriority="high"
                                     className="w-full object-cover h-full object-center block"
                                     src="./blank.webp"
                                     loading="lazy"
@@ -36,7 +34,7 @@ function ImagesLayout() {
                             <div className="md:p-2 p-1 w-full">
                                 <img
                                     alt="गैलरी चित्र 3"
-                                    fetchPriority="high"
+                                    fetchPriority="auto"
                                     className="w-full h-full object-cover object-center block"
                                     src="./blank.webp"
                                     loading="lazy"
@@ -51,7 +49,7 @@ function ImagesLayout() {
                             <div className="md:p-2 p-1 w-full">
                                 <img
                                     alt="गैलरी चित्र 4"
-                                    fetchPriority="high"
+                                    fetchPriority="auto"
                                     className="w-full h-full object-cover object-center block"
                                     src="./blank.webp"
                                     loading="lazy"
@@ -63,7 +61,7 @@ function ImagesLayout() {
                             <div className="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="गैलरी चित्र 5"
-                                    fetchPriority="high"
+                                    fetchPriority="auto"
                                     className="w-full object-cover h-full object-center block"
                                     src="./blank.webp"
                                     loading="lazy"
@@ -75,7 +73,7 @@ function ImagesLayout() {
                             <div className="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="गैलरी चित्र 6"
-                                    fetchPriority="high"
+                                    fetchPriority="auto"
                                     className="w-full object-cover h-full object-center block"
                                     src="./blank.webp"
                                     loading="lazy"

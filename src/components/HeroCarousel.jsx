@@ -42,7 +42,7 @@ export default function HeroCarousel() {
               src={img.src}
               className="w-full h-auto object-cover lg:object-fill"
               alt=""
-              loading="lazy" decoding="async"
+              loading="eager" fetchPriority="high" decoding="async"
             />
           </div>
         ))}

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +11,11 @@
   
   <!-- Preload critical assets -->
   <link rel="preload" as="image" href="/NavLogo.webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="/flag.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/sliderImg1.webp" fetchpriority="high" />
+  
+  <!-- Resource hints for performance -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 
   <!-- SEO Title -->
@@ -60,7 +64,7 @@
 
 <body>
   <div id="root"></div>
-  <script type="module" src="src/main.jsx" defer></script>
+  <script type="module" src="src/main.jsx"></script>
   
   <!-- Service Worker for caching -->
   <script>
