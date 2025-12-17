@@ -24,25 +24,25 @@ export default function Navbar() {
           {/* desktop menu */}
           <ul className="hidden md:flex items-center space-x-8 md:gap-6 lg:gap-10 ml-6">
             <li className="nav-item  m-0 text-center">
-              <Link to="/" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">HOME</Link>
+              <Link to="/" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">HOME</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/about" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">ABOUT</Link>
+              <Link to="/about" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">ABOUT</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/gallery" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">GALLERY</Link>
+              <Link to="/gallery" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">GALLERY</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/news" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">NEWS</Link>
+              <Link to="/news" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">NEWS</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/join" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">JOIN</Link>
+              <Link to="/join" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">JOIN</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/donate" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">DONATION</Link>
+              <Link to="/donate" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">DONATION</Link>
             </li>
             <li className="nav-item  m-0 text-center">
-              <Link to="/contact" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-500 hover:text-white">CONTACT</Link>
+              <Link to="/contact" className="text-sm md:text-2 lg:text-[16px] font-bold text-gray-700 hover:text-gray-900">CONTACT</Link>
             </li>
           </ul>
 

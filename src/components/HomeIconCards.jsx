@@ -77,8 +77,9 @@ export default function HomeIconCards() {
             const Icon = card.icon;
             return (
               <div
+              onClick={() => navigate(card.path)}
                 key={index}
-                className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center justify-between border border-gray-200"
+                className="cursor-pointer bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col items-center justify-between border border-gray-200"
               >
                 <div className="flex flex-col items-center space-y-4 grow">
                   <div className="w-20 h-20 bg-red-600 rounded-lg flex items-center justify-center">
@@ -96,7 +97,7 @@ export default function HomeIconCards() {
                 </div>
 
                 <button
-                onClick={() => navigate(card.path)}
+                // onClick={() => navigate(card.path)}
                 className="mt-6 w-full bg-red-600 cursor-pointer hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200">
                   {card.buttonText}
                 </button>
