@@ -204,28 +204,28 @@ function Donate() {
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-gray-800">पारदर्शिता और जवाबदेही</p>
-                    <p className="text-sm text-gray-600">प्रत्येक दान का पूर्ण हिसाब-किताब</p>
+                    <p className="text-sm text-gray-500">प्रत्येक दान का पूर्ण हिसाब-किताब</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-gray-800">सामाजिक विकास कार्यक्रम</p>
-                    <p className="text-sm text-gray-600">शिक्षा, स्वास्थ्य और रोजगार के अवसर</p>
+                    <p className="text-sm text-gray-500">शिक्षा, स्वास्थ्य और रोजगार के अवसर</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-gray-800">राजनीतिक सुधार</p>
-                    <p className="text-sm text-gray-600">भ्रष्टाचार मुक्त राजनीति का निर्माण</p>
+                    <p className="text-sm text-gray-500">भ्रष्टाचार मुक्त राजनीति का निर्माण</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-gray-800">जनसेवा परियोजनाएं</p>
-                    <p className="text-sm text-gray-600">गरीबों और जरूरतमंदों की सहायता</p>
+                    <p className="text-sm text-gray-500">गरीबों और जरूरतमंदों की सहायता</p>
                   </div>
                 </div>
               </div>
@@ -237,7 +237,7 @@ function Donate() {
               <p className="text-gray-700 mb-2">
                 आयकर अधिनियम की धारा 80G के तहत आपके दान पर कर छूट मिलेगी।
               </p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-500">
                 * 80G प्रमाणपत्र ईमेल द्वारा प्रदान किया जाएगा
               </p>
             </div>

@@ -14,7 +14,7 @@ export default function NewsBlogHeader({
         </h2>
 
         {/* Description */}
-        <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-base md:text-lg lg:text-xl text-gray-500 max-w-3xl mx-auto">
           {description}
         </p>
       </div>

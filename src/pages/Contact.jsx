@@ -54,11 +54,11 @@ export default function Contact() {
                   <MapPin className="w-12 h-12 text-red-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">Address</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   Ragi. D60, Dev nagar, murlipura, jaipur.<br />
                   Rajasthan
                 </p>
-                <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                <p className="text-gray-500 text-sm leading-relaxed mt-2">
                   Office - 5-6, new colony, path no-7, sikar<br />
                   road, Jaipur, Rajasthan
                 </p>
@@ -70,7 +70,7 @@ export default function Contact() {
                   <Phone className="w-12 h-12 text-red-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">Phone Number</h3>
-                <p className="text-gray-600 text-lg">+91 9024222255</p>
+                <p className="text-gray-500 text-lg">+91 9024222255</p>
               </div>
 
               {/* Email Card */}
@@ -79,7 +79,7 @@ export default function Contact() {
                   <Mail className="w-12 h-12 text-red-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">Email Address</h3>
-                <p className="text-gray-600 text-lg break-all">SarvaShaktidal@gmail.com</p>
+                <p className="text-gray-500 text-lg break-all">SarvaShaktidal@gmail.com</p>
               </div>
             </div>
 

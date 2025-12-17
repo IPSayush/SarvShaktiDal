@@ -41,9 +41,9 @@ export default function News() {
     <main className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Title */}
-        <h2 className="text-center text-2xl sm:text-3xl font-semibold text-gray-800 mb-8">
+        {/* <h2 className="text-center text-2xl sm:text-3xl font-semibold text-gray-800 mb-8">
           Job In Grid
-        </h2>
+        </h2> */}
 
         {/* Grid: main (2 cols) + sidebar (1 col) on md+ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -133,7 +133,7 @@ export default function News() {
               <h5 className="text-sm font-semibold text-gray-800 mb-2">
                 Subscribe
               </h5>
-              <p className="text-sm text-gray-600 mb-3">
+              <p className="text-sm text-gray-500 mb-3">
                 Latest updates aur khabar ke liye subscribe karein.
               </p>
               <form className="flex gap-2">

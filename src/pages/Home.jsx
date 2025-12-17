@@ -14,20 +14,16 @@ function Home() {
       <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading...</div>}>
         <HeroCarousel />
         <HomeMain />
-        <Heading
-          title="NEWS AND BLOG"
-          description="Discover the latest updates, news, and insights from our team."
-        />
 
         <HomeIconCards />
         <Heading
-          title="NEWS aur BLOG"
-          description="Discover the latest updates, news, and insights from our team."
+          title="PHOTO GALLERY"
+          description="Explore our moments, events, and inspirations captured in frames"
         />
 
         <ImagesLayout />
         <Heading
-          title="NEWS ^ BLOG"
+          title="NEWS AND BLOG"
           description="Discover the latest updates, news, and insights from our team."
         />
 

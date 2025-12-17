@@ -51,7 +51,7 @@ export default function Join() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
                 हमसे जुड़ें
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 mb-2">
+              <p className="text-lg md:text-xl text-gray-500 mb-2">
                 Join Our Movement for Change
               </p>
               <p className="text-base text-gray-500 max-w-2xl mx-auto">
@@ -339,7 +339,7 @@ export default function Join() {
 
             {/* Bottom Info */}
             <div className="mt-8 text-center">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-500 text-sm">
                 किसी भी सहायता के लिए संपर्क करें: <span className="font-semibold text-orange-600">+91 1234 567 890</span> या <span className="font-semibold text-orange-600">info@party.com</span>
               </p>
             </div>

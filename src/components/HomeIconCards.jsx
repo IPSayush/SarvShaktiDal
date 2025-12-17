@@ -1,54 +1,71 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import { Users, Plus, HelpCircle, DollarSign, AlertCircle, Share2 } from 'lucide-react';
-export default function HomeIconCards () {
+export default function HomeIconCards() {
+  const navigate = useNavigate();
+  const sharePage = () => {
+    navigator.share({
+      title: "My Website",
+      url: window.location.href
+    });
+  };
+
   const cards = [
     {
       icon: Users,
       title: "Become Member",
       titleHindi: "सदस्य बनें",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "/join"
     },
     {
       icon: Plus,
       title: "Benefits of Membership",
       titleHindi: "सदस्यता के फ़ायदे",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "/"
     },
     {
       icon: HelpCircle,
       title: "About Sarvashaktidal",
       titleHindi: "जानें सर्वशक्ति दल के बारे में",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "/about"
     },
     {
       icon: DollarSign,
       title: "Social Media",
       titleHindi: "सोशल मीडिया",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "#footer"
     },
     {
       icon: HelpCircle,
       title: "About Janta Darbaar",
       titleHindi: "जानें जनता दरबार के बारे में",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "#footer"
     },
     {
       icon: AlertCircle,
       title: "For Problem Solution",
       titleHindi: "समस्या निवारण हेतु",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "/contact"
     },
     {
       icon: DollarSign,
       title: "To Donate",
       titleHindi: "दान करने हेतु",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "/donate"
     },
     {
       icon: Share2,
       title: "Share App",
       titleHindi: "ऐप शेयर करें",
-      buttonText: "Sarva Shakti Dal"
+      buttonText: "Sarva Shakti Dal",
+      path: "#"
     }
   ];
 
@@ -67,18 +84,20 @@ export default function HomeIconCards () {
                   <div className="w-20 h-20 bg-red-600 rounded-lg flex items-center justify-center">
                     <Icon className="w-10 h-10 text-white" strokeWidth={2} />
                   </div>
-                  
+
                   <div className="text-center space-y-1">
                     <h3 className="text-lg font-semibold text-gray-800">
                       {card.title}
                     </h3>
-                    <p className="text-base text-gray-600">
+                    <p className="text-base text-gray-500">
                       {card.titleHindi}
                     </p>
                   </div>
                 </div>
-                
-                <button className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200">
+
+                <button
+                onClick={() => navigate(card.path)}
+                className="mt-6 w-full bg-red-600 cursor-pointer hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200">
                   {card.buttonText}
                 </button>
               </div>

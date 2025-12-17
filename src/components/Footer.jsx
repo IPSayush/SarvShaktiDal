@@ -19,7 +19,7 @@ export default function FooterSection() {
     ];
 
     return (
-        <div className="w-full">
+        <div className="w-full" id='footer'>
             {/* Main Footer Section */}
             <div className="relative background-main-gradient py-12 px-6 lg:px-16">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -1,10 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Main = () => {
+    const navigate = useNavigate();
     return (
         <>
             <main id="main-content">
-                <section className="text-gray-600 body-font" aria-labelledby="hero-heading">
+                <section className="text-gray-500 body-font" aria-labelledby="hero-heading">
                     <div className="container mx-auto flex px-5 py-15 md:flex-row flex-col items-center border border-red-300 shadow-lg rounded-lg mb-10">
                         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 ">
                             {/* optimized image: loading lazy, decoding async, dimensions */}
@@ -39,9 +41,10 @@ const Main = () => {
                             <div className="flex justify-center">
                                 {/* button kept same styling; made accessible with type and focus-visible attributes (no visual style changes unless browser default focus) */}
                                 <button
+                                onClick={() => navigate('/about')}
                                     type="button"
                                     aria-label="और अधिक जानकारी"
-                                    className="inline-flex text-white bg-[#dc3545] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                                    className="inline-flex text-white cursor-pointer bg-[#dc3545] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
                                 >
                                     और...
                                 </button>
