@@ -1,9 +1,12 @@
 import React from 'react'
 import { MapPin, Phone, Mail } from "lucide-react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Heading from "../components/Heading.jsx";
 import FormContact from "../components/FormContact.jsx";
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

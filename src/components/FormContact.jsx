@@ -103,7 +103,6 @@ export default function ContactFAQSection() {
               onChange={handleChange}
               className="w-full px-4 py-3 bg-red-700 border-2 border-red-800 text-white placeholder-red-300 rounded focus:outline-none focus:border-red-900"
             />
-
             <textarea
               name="message"
               placeholder="Message"
@@ -112,10 +111,9 @@ export default function ContactFAQSection() {
               rows="4"
               className="w-full px-4 py-3 bg-red-700 border-2 border-red-800 text-white placeholder-red-300 rounded focus:outline-none focus:border-red-900 resize-none"
             />
-
             <button
               type="submit"
-              className="w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-6 rounded text-xl transition-colors duration-200"
+              className=" cursor-pointer w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-6 rounded text-xl transition-colors duration-200"
             >
               SUBMIT
             </button>

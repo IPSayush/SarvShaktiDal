@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { User, Mail, Phone, MapPin, Users, Briefcase, Calendar, FileText } from 'lucide-react';
 import Heading from "../components/Heading.jsx";
 import FormContact from "../components/FormContact.jsx";
 
 export default function Join() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',

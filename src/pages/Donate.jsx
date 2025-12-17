@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Heart, Users, Droplet, HandHeart, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 function Donate() {
@@ -44,13 +44,16 @@ function Donate() {
     }
     alert(`धन्यवाद! आपका ₹${amount} का दान प्राप्त हुआ`);
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    alert('Donate Page is Under Maintenance. Please try again later.');
+  }, []);
   return (
     <>
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+    <div className="min-h-screen bg-linear-to-b from-orange-50 to-white">
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white py-12 px-4">
+      <div className="bg-linear-to-r from-red-500 to-orange-500 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4">दान करें और बदलाव लाएं</h2>
           <p className="text-lg sm:text-xl mb-6">आपका हर योगदान देश के विकास में सहायक है</p>
@@ -183,7 +186,7 @@ function Donate() {
             {/* Donate Button */}
             <button
               onClick={handleDonate}
-              className="w-full mt-6 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold py-4 px-6 rounded-lg hover:from-red-700 hover:to-orange-700 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              className="w-full mt-6 bg-linear-to-r from-red-600 to-orange-600 text-white font-bold py-4 px-6 rounded-lg hover:from-red-700 hover:to-orange-700 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
             >
               <Heart className="w-5 h-5" />
               दान करें
@@ -232,7 +235,7 @@ function Donate() {
             </div>
 
             {/* Tax Benefits */}
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg shadow-lg p-6 border-2 border-yellow-300">
+            <div className="bg-linear-to-br from-yellow-50 to-orange-50 rounded-lg shadow-lg p-6 border-2 border-yellow-300">
               <h3 className="text-xl font-bold text-gray-800 mb-3">कर लाभ</h3>
               <p className="text-gray-700 mb-2">
                 आयकर अधिनियम की धारा 80G के तहत आपके दान पर कर छूट मिलेगी।
@@ -262,7 +265,7 @@ function Donate() {
             </div>
 
             {/* Trust Badge */}
-            <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg shadow-lg p-6 text-center">
+            <div className="bg-linear-to-r from-red-600 to-orange-600 text-white rounded-lg shadow-lg p-6 text-center">
               <Droplet className="w-12 h-12 mx-auto mb-3" />
               <p className="font-bold text-lg">आपका हर रुपया मायने रखता है</p>
               <p className="text-sm mt-2">देश के उज्ज्वल भविष्य में योगदान दें</p>

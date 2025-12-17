@@ -1,8 +1,11 @@
 import React from 'react'
 import FormContact from '../components/FormContact.jsx';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const Gallery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [

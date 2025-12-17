@@ -1,7 +1,11 @@
 import React from 'react' // <-- yahan apna image path daal dena
 import FormContact from '../components/FormContact.jsx';
 import Heading from '../components/Heading.jsx';
+import { useEffect } from 'react';
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="w-full">

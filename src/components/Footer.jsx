@@ -9,8 +9,8 @@ export default function FooterSection() {
             alert(`Subscribed with email: ${email}`);
             setEmail('');
         }
-        
-     };
+
+    };
 
     const recentPosts = [
         'Privacy Policy',
