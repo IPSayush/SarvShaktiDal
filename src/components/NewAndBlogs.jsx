@@ -33,7 +33,6 @@ const NewsAndBlogs = () => {
                           <path d="M12 5l7 7-7 7"></path>
                         </svg>
                       </Link>
-
                     </div>
                   </div>
                 </div>

@@ -15,25 +15,25 @@ export default function Contact() {
     message: ''
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted:', formData);
+  //   alert('Message sent successfully!');
+  //   setFormData({
+  //     name: '',
+  //     phone: '',
+  //     email: '',
+  //     subject: '',
+  //     message: ''
+  //   });
+  // };
   return (
     <>
       <div className="w-full">
@@ -87,7 +87,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
+            {/* <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">CONTACT FORM</h2>
               <div className="w-20 h-1 bg-red-600 mb-8"></div>
 
@@ -153,7 +153,7 @@ export default function Contact() {
                   Send Message
                 </button>
               </form>
-            </div>
+            </div> */}
             {/* Map Section */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden mt-12">
               <div className="bg-orange-600 py-4 px-6">
