@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { Heart, Users, Droplet, HandHeart, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-
+import { delay } from '../functions';
 function Donate() {
   const {
     register,
     handleSubmit,
     setValue,
     watch,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       name: '',
@@ -35,8 +35,9 @@ function Donate() {
   const handleCustomAmount = (e) => {
     setSelectedAmount(null);
   };
-
-  const onSubmit = (data) => {
+ 
+  const onSubmit = async (data) => {
+    await delay(2)
     const amount = selectedAmount || data.amount;
     if (!amount || amount <= 0) {
       alert('कृपया दान राशि चुनें');
@@ -179,7 +180,9 @@ function Donate() {
               </div>
 
               {/* Donate Button */}
+              {isSubmitting && <div>Load...</div>}
               <button
+              disabled={isSubmitting}
                 onClick={handleSubmit(onSubmit)}
                 className="w-full mt-6 bg-linear-to-r from-red-600 to-orange-600 text-white font-bold py-4 px-6 rounded-lg hover:from-red-700 hover:to-orange-700 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
               >

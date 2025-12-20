@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { User, Mail, Phone, MapPin, Users, Briefcase, Calendar, FileText } from 'lucide-react';
-
+import { delay } from '../functions';
 export default function Join() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       fullName: '',
@@ -32,7 +32,8 @@ export default function Join() {
 
   const [openFAQ, setOpenFAQ] = useState(null);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    await delay(2)
     console.log('Form submitted:', data);
     alert('आपका फॉर्म सफलतापूर्वक जमा हो गया है! हम जल्द ही आपसे संपर्क करेंगे।');
   };
@@ -290,13 +291,16 @@ export default function Join() {
 
                   {/* Submit Button */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    {isSubmitting && <div>Load...</div>}
                     <button
+                    disabled={isSubmitting}
                       onClick={handleSubmit(onSubmit)}
                       className="flex-1 bg-orange-600 hover:from-orange-700 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg transform hover:scale-105 transition-all duration-200"
                     >
                       फॉर्म जमा करें / Submit Form
                     </button>
                     <button
+                    
                       onClick={() => reset()}
                       type="button"
                       className="flex-1 sm:flex-none bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200"

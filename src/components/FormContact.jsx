@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form"
-
+import { delay } from '../functions';
 export default function ContactFAQSection() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm()
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    await delay(2)
     console.log(data);
     alert('फॉर्म सबमिट हो गया है!');
+    return;
   }
 
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -90,7 +92,9 @@ export default function ContactFAQSection() {
               rows="4"
               className="w-full px-4 py-3 bg-red-700 border-2 border-red-800 text-white placeholder-red-300 rounded focus:outline-none focus:border-red-900 resize-none"
             />
-            <button
+            {isSubmitting && <div>Load...</div>}
+              <button
+              disabled={isSubmitting}
               onClick={handleSubmit(onSubmit)}
               className=" cursor-pointer w-full bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-6 rounded text-xl transition-colors duration-200"
             >
